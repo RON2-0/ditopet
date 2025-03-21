@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DitoPet</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="phone">
+            <div class="screen">
+                <div class="header">
+                    <div class="header__top">
+                        <div class="header__menu-icon">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="header__greeting">
+                            Hola, [Nombre]
+                        </div>
+                        <div class="header__icons">
+                            <div class="icon-circle">
+                                <i class="fas fa-question"></i>
+                            </div>
+                            <div class="icon-circle">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__title">
+                        <h1>Bienvenido a Dito Wallet</h1>
+                    </div>
+                    <div class="header__balances">
+                        <div class="balance-box">
+                            <span class="currency">US</span>
+                            <span class="amount">$1,500.00</span>
+                        </div>
+                        <div class="balance-conversion">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="balance-box dos">
+                            <span class="currency">BTC</span>
+                            <span class="amount">0.025 BTC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="transactions">
+                        <div class="transactions__header">
+                            <span class="date">20 de marzo, 2025</span>
+                            <a href="#" class="view-all">Ver todas</a>
+                        </div>
+                        <div class="transaction-item">
+                            <span>Recarga</span>
+                            <span>+ $50.00</span>
+                        </div>
+                        <div class="transaction-item">
+                            <span>Envío a Juan</span>
+                            <span>- $20.00</span>
+                        </div>
+                        <div class="transaction-item">
+                            <span>Pago Servicio</span>
+                            <span>- $15.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movemos action-buttons y floating-button fuera de content para posicionarlos mejor -->
+                <div class="bottom-section">
+                    <div class="action-buttons">
+                        <button class="btn">Recibir</button>
+                        <button class="btn">Enviar</button>
+                    </div>
+                    <div class="floating-button">
+                        <img src="/images/logo.png" alt="DitoPet" class="floating-logo">
+                    </div>
+                    <div class="nav-bar">
+                        <a href="#" class="nav-item"><i class="fas fa-home"></i> Inicio</a>
+                        <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
+                        <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
+                        <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
