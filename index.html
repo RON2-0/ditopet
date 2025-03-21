@@ -11,80 +11,288 @@
     <div class="container">
         <div class="phone">
             <div class="screen">
-                <div class="header">
-                    <div class="header__top">
-                        <div class="header__menu-icon">
-                            <i class="fas fa-bars"></i>
-                        </div>
-                        <div class="header__greeting">
-                            Hola, [Nombre]
-                        </div>
-                        <div class="header__icons">
-                            <div class="icon-circle">
-                                <i class="fas fa-question"></i>
+                <!-- Ventana principal -->
+                <div class="main-window" id="mainWindow">
+                    <div class="header">
+                        <div class="header__top">
+                            <div class="header__menu-icon">
+                                <i class="fas fa-bars"></i>
                             </div>
-                            <div class="icon-circle">
-                                <i class="fas fa-bell"></i>
+                            <div class="header__greeting">
+                                Hola, [Nombre]
+                            </div>
+                            <div class="header__icons">
+                                <div class="icon-circle">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                                <div class="icon-circle">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__title">
+                            <h1>Bienvenido a Dito Wallet</h1>
+                        </div>
+                        <div class="header__balances">
+                            <div class="balance-box">
+                                <span class="currency">US</span>
+                                <span class="amount">$1,500.00</span>
+                            </div>
+                            <div class="balance-conversion">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div class="balance-box dos">
+                                <span class="currency">BTC</span>
+                                <span class="amount">0.025 BTC</span>
                             </div>
                         </div>
                     </div>
-                    <div class="header__title">
-                        <h1>Bienvenido a Dito Wallet</h1>
+
+                    <div class="content">
+                        <div class="transactions">
+                            <div class="transactions__header">
+                                <span class="date">20 de marzo, 2025</span>
+                                <a href="#" class="view-all">Ver todas</a>
+                            </div>
+                            <div class="transaction-item">
+                                <span>Recarga</span>
+                                <span>+ $50.00</span>
+                            </div>
+                            <div class="transaction-item">
+                                <span>Envío a Juan</span>
+                                <span>- $20.00</span>
+                            </div>
+                            <div class="transaction-item">
+                                <span>Pago Servicio</span>
+                                <span>- $15.00</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="header__balances">
-                        <div class="balance-box">
-                            <span class="currency">US</span>
-                            <span class="amount">$1,500.00</span>
+
+                    <div class="bottom-section">
+                        <div class="action-buttons">
+                            <button class="btn">Recibir</button>
+                            <button class="btn">Enviar</button>
                         </div>
-                        <div class="balance-conversion">
-                            <i class="fas fa-exchange-alt"></i>
+                        <div class="floating-button" id="switchButton">
+                            <div class="dot"></div>
+                            <img src="/images/dito.png" alt="DitoPet" class="floating-logo">
                         </div>
-                        <div class="balance-box dos">
-                            <span class="currency">BTC</span>
-                            <span class="amount">0.025 BTC</span>
+                        <div class="nav-bar">
+                            <a href="#" class="nav-item" id="homeLinkMain"><i class="fas fa-home"></i> Inicio</a>
+                            <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
+                            <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
+                            <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="content">
-                    <div class="transactions">
-                        <div class="transactions__header">
-                            <span class="date">20 de marzo, 2025</span>
-                            <a href="#" class="view-all">Ver todas</a>
+                <!-- Ventana de minijuegos -->
+                <div class="games-window" id="gamesWindow" style="display: none;">
+                    <div class="header">
+                        <div class="header__top">
+                            <div class="header__menu-icon">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <div class="header__greeting"></div>
+                            <div class="header__icons">
+                                <div class="icon-circle">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                                <div class="icon-circle">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div class="transaction-item">
-                            <span>Recarga</span>
-                            <span>+ $50.00</span>
+                        <div class="games-header">
+                            <div class="mascot-placeholder">
+                                <img src="/images/dito.png" alt="DitoPet" class="mascot">
+                            </div> <!-- Placeholder para la mascota -->
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%;">
+                                    <p>1000xp/1500xp</p>
+                                </div> <!-- Ejemplo: 60% lleno -->
+                            </div>
+                            <h2>Racha: 5 días</h2>
+                            <p>Puntaje: 1,250</p>
                         </div>
-                        <div class="transaction-item">
-                            <span>Envío a Juan</span>
-                            <span>- $20.00</span>
+                    </div>
+                    <div class="games-content">
+                        <div class="mini-game">
+                            <h3>Juego 1</h3>
+                            <p>Adivina el precio de BTC</p>
                         </div>
-                        <div class="transaction-item">
-                            <span>Pago Servicio</span>
-                            <span>- $15.00</span>
+                        <div class="mini-game">
+                            <h3>Juego 2</h3>
+                            <p>Toca la alpaca</p>
+                        </div>
+                        <div class="mini-game">
+                            <h3>Juego 3</h3>
+                            <p>Ruleta de cripto</p>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="action-buttons">
+                            <button class="btn" id="newsButton">Noticias</button>
+                        </div>
+                        <div class="floating-button chat-button" id="chatButton">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="nav-bar">
+                            <a href="#" class="nav-item" id="homeLinkGames"><i class="fas fa-home"></i> Inicio</a>
+                            <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
+                            <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
+                            <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
+                        </div>
+                    </div>
+                    <!-- Chat flotante -->
+                    <div class="chat-popup" id="chatPopup" style="display: none;">
+                        <div class="chat-header">
+                            <h3>Chat con Dito</h3>
+                            <button class="close-chat" id="closeChat">×</button>
+                        </div>
+                        <div class="chat-body">
+                            <p>Hola! ¿En qué puedo ayudarte?</p>
+                        </div>
+                        <div class="chat-footer">
+                            <input type="text" placeholder="Escribe un mensaje...">
+                            <button><i class="fas fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Movemos action-buttons y floating-button fuera de content para posicionarlos mejor -->
-                <div class="bottom-section">
-                    <div class="action-buttons">
-                        <button class="btn">Recibir</button>
-                        <button class="btn">Enviar</button>
+                <!-- Ventana de noticias -->
+                <div class="news-window" id="newsWindow" style="display: none;">
+                    <div class="header">
+                        <div class="header__top">
+                            <div class="header__menu-icon">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <div class="header__greeting">
+                                <button class="back-button" id="backButton"><i class="fas fa-arrow-left"></i> Atrás</button>
+                            </div>
+                            <div class="header__icons">
+                                <div class="icon-circle">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                                <div class="icon-circle">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="floating-button">
-                        <img src="/images/logo.png" alt="DitoPet" class="floating-logo">
+                    <div class="news-content">
+                        <div class="news-item">
+                            <h3>Bitcoin sube un 5%</h3>
+                            <p>El precio de Bitcoin alcanzó nuevos máximos esta semana...</p>
+                        </div>
+                        <div class="news-item">
+                            <h3>Nueva regulación cripto</h3>
+                            <p>El gobierno anunció medidas para regular las wallets...</p>
+                        </div>
+                        <div class="news-item">
+                            <h3>Evento DitoPet</h3>
+                            <p>Participa en nuestro próximo evento de criptojuegos...</p>
+                        </div>
                     </div>
-                    <div class="nav-bar">
-                        <a href="#" class="nav-item"><i class="fas fa-home"></i> Inicio</a>
-                        <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
-                        <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
-                        <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
+                    <div class="bottom-section">
+                        <div class="floating-button chat-button" id="chatButtonNews">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="nav-bar">
+                            <a href="#" class="nav-item" id="homeLinkNews"><i class="fas fa-home"></i> Inicio</a>
+                            <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
+                            <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
+                            <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
+                        </div>
+                    </div>
+                    <!-- Chat flotante -->
+                    <div class="chat-popup" id="chatPopupNews" style="display: none;">
+                        <div class="chat-header">
+                            <h3>Chat con Dito</h3>
+                            <button class="close-chat" id="closeChatNews">×</button>
+                        </div>
+                        <div class="chat-body">
+                            <p>Hola! ¿En qué puedo ayudarte?</p>
+                        </div>
+                        <div class="chat-footer">
+                            <input type="text" placeholder="Escribe un mensaje...">
+                            <button><i class="fas fa-paper-plane"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Cambiar de ventana a minijuegos
+        const switchButton = document.getElementById('switchButton');
+        const mainWindow = document.getElementById('mainWindow');
+        const gamesWindow = document.getElementById('gamesWindow');
+        const newsWindow = document.getElementById('newsWindow');
+
+        switchButton.addEventListener('click', () => {
+            mainWindow.style.display = 'none';
+            gamesWindow.style.display = 'block';
+        });
+
+        // Volver a la ventana principal desde la nav-bar
+        const homeLinkMain = document.getElementById('homeLinkMain');
+        const homeLinkGames = document.getElementById('homeLinkGames');
+        const homeLinkNews = document.getElementById('homeLinkNews');
+
+        homeLinkGames.addEventListener('click', (e) => {
+            e.preventDefault();
+            gamesWindow.style.display = 'none';
+            mainWindow.style.display = 'block';
+        });
+
+        homeLinkNews.addEventListener('click', (e) => {
+            e.preventDefault();
+            newsWindow.style.display = 'none';
+            mainWindow.style.display = 'block';
+        });
+
+        // Ir a la ventana de noticias
+        const newsButton = document.getElementById('newsButton');
+        newsButton.addEventListener('click', () => {
+            gamesWindow.style.display = 'none';
+            newsWindow.style.display = 'block';
+        });
+
+        // Volver a la ventana de juegos desde noticias
+        const backButton = document.getElementById('backButton');
+        backButton.addEventListener('click', () => {
+            newsWindow.style.display = 'none';
+            gamesWindow.style.display = 'block';
+        });
+
+        // Abrir/cerrar chat en ventana de juegos
+        const chatButton = document.getElementById('chatButton');
+        const chatPopup = document.getElementById('chatPopup');
+        const closeChat = document.getElementById('closeChat');
+
+        chatButton.addEventListener('click', () => {
+            chatPopup.style.display = 'block';
+        });
+
+        closeChat.addEventListener('click', () => {
+            chatPopup.style.display = 'none';
+        });
+
+        // Abrir/cerrar chat en ventana de noticias
+        const chatButtonNews = document.getElementById('chatButtonNews');
+        const chatPopupNews = document.getElementById('chatPopupNews');
+        const closeChatNews = document.getElementById('closeChatNews');
+
+        chatButtonNews.addEventListener('click', () => {
+            chatPopupNews.style.display = 'block';
+        });
+
+        closeChatNews.addEventListener('click', () => {
+            chatPopupNews.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
