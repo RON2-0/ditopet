@@ -545,6 +545,7 @@
 
 .timeline {
     position: relative;
+    width: auto
 }
 
 .timeline-bar {
