@@ -185,7 +185,6 @@
     align-items: center;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    background-color: #fff;
 }
 
 .dot {
@@ -387,16 +386,16 @@
 .menu-item {
     display: block;
     padding: 10px;
-    background-color: #fff;
+    background-color: #212121;
     border-radius: 8px;
     text-decoration: none;
-    color: #666;
+    color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 5px;
 }
 
 .menu-item:hover {
-    color: #2c3e50;
+    color: #df8b33;
 }
 
 /* Levels Window */
@@ -525,6 +524,7 @@
     font-size: 14px;
     color: #666;
     margin-bottom: 10px;
+    padding-top: 5px;
 }
 
 .task-list li input[type="checkbox"] {
