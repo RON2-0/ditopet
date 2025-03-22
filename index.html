@@ -15,11 +15,12 @@
                 <div class="main-window" id="mainWindow">
                     <div class="header">
                         <div class="header__top">
-                            <div class="header__menu-icon">
+                            <div class="header__menu-icon" id="menuButton">
                                 <i class="fas fa-bars"></i>
                             </div>
                             <div class="header__greeting">
-                                Hola, [Nombre]
+                                <p>Hola, [Nombre]</p>
+                                <p>Bienvenido a Dito Wallet</p>
                             </div>
                             <div class="header__icons">
                                 <div class="icon-circle">
@@ -29,9 +30,6 @@
                                     <i class="fas fa-bell"></i>
                                 </div>
                             </div>
-                        </div>
-                        <div class="header__title">
-                            <h1>Bienvenido a Dito Wallet</h1>
                         </div>
                         <div class="header__balances">
                             <div class="balance-box">
@@ -47,7 +45,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="content">
                         <div class="transactions">
                             <div class="transactions__header">
@@ -68,7 +65,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="bottom-section">
                         <div class="action-buttons">
                             <button class="btn">Recibir</button>
@@ -82,6 +78,7 @@
                             <a href="#" class="nav-item" id="homeLinkMain"><i class="fas fa-home"></i> Inicio</a>
                             <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
                             <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
+                            <a href="#" class="nav-item" id="newsLinkMain"><i class="fas fa-newspaper"></i> Noticias</a>
                             <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
                         </div>
                     </div>
@@ -91,7 +88,7 @@
                 <div class="games-window" id="gamesWindow" style="display: none;">
                     <div class="header">
                         <div class="header__top">
-                            <div class="header__menu-icon">
+                            <div class="header__menu-icon" id="menuButtonGames">
                                 <i class="fas fa-bars"></i>
                             </div>
                             <div class="header__greeting"></div>
@@ -107,11 +104,6 @@
                         <div class="games-header">
                             <div class="mascot-placeholder">
                                 <img src="/images/dito.png" alt="DitoPet" class="mascot">
-                            </div> <!-- Placeholder para la mascota -->
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 60%;">
-                                    <p>1000xp/1500xp</p>
-                                </div> <!-- Ejemplo: 60% lleno -->
                             </div>
                             <h2>Racha: 5 días</h2>
                             <p>Puntaje: 1,250</p>
@@ -132,31 +124,15 @@
                         </div>
                     </div>
                     <div class="bottom-section">
-                        <div class="action-buttons">
-                            <button class="btn" id="newsButton">Noticias</button>
-                        </div>
-                        <div class="floating-button chat-button" id="chatButton">
-                            <i class="fas fa-comment"></i>
+                        <div class="floating-button" id="petButton">
+                            <img src="/images/dito.png" alt="DitoPet" class="floating-logo">
                         </div>
                         <div class="nav-bar">
                             <a href="#" class="nav-item" id="homeLinkGames"><i class="fas fa-home"></i> Inicio</a>
                             <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
                             <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
+                            <a href="#" class="nav-item" id="newsLinkGames"><i class="fas fa-newspaper"></i> Noticias</a>
                             <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
-                        </div>
-                    </div>
-                    <!-- Chat flotante -->
-                    <div class="chat-popup" id="chatPopup" style="display: none;">
-                        <div class="chat-header">
-                            <h3>Chat con Dito</h3>
-                            <button class="close-chat" id="closeChat">×</button>
-                        </div>
-                        <div class="chat-body">
-                            <p>Hola! ¿En qué puedo ayudarte?</p>
-                        </div>
-                        <div class="chat-footer">
-                            <input type="text" placeholder="Escribe un mensaje...">
-                            <button><i class="fas fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>
@@ -165,12 +141,10 @@
                 <div class="news-window" id="newsWindow" style="display: none;">
                     <div class="header">
                         <div class="header__top">
-                            <div class="header__menu-icon">
+                            <div class="header__menu-icon" id="menuButtonNews">
                                 <i class="fas fa-bars"></i>
                             </div>
-                            <div class="header__greeting">
-                                <button class="back-button" id="backButton"><i class="fas fa-arrow-left"></i> Atrás</button>
-                            </div>
+                            <div class="header__greeting"></div>
                             <div class="header__icons">
                                 <div class="icon-circle">
                                     <i class="fas fa-question"></i>
@@ -182,42 +156,222 @@
                         </div>
                     </div>
                     <div class="news-content">
-                        <div class="news-item">
-                            <h3>Bitcoin sube un 5%</h3>
-                            <p>El precio de Bitcoin alcanzó nuevos máximos esta semana...</p>
+                        <div class="news-date">
+                            <span>21 de marzo, 2025</span>
+                            <div class="news-item">
+                                <h3>Bitcoin sube un 5%</h3>
+                                <p>El precio de Bitcoin alcanzó nuevos máximos esta semana...</p>
+                            </div>
                         </div>
-                        <div class="news-item">
-                            <h3>Nueva regulación cripto</h3>
-                            <p>El gobierno anunció medidas para regular las wallets...</p>
-                        </div>
-                        <div class="news-item">
-                            <h3>Evento DitoPet</h3>
-                            <p>Participa en nuestro próximo evento de criptojuegos...</p>
+                        <div class="news-date">
+                            <span>20 de marzo, 2025</span>
+                            <div class="news-item">
+                                <h3>Nueva regulación cripto</h3>
+                                <p>El gobierno anunció medidas para regular las wallets...</p>
+                            </div>
+                            <div class="news-item">
+                                <h3>Evento DitoPet</h3>
+                                <p>Participa en nuestro próximo evento de criptojuegos...</p>
+                            </div>
                         </div>
                     </div>
                     <div class="bottom-section">
-                        <div class="floating-button chat-button" id="chatButtonNews">
-                            <i class="fas fa-comment"></i>
-                        </div>
                         <div class="nav-bar">
                             <a href="#" class="nav-item" id="homeLinkNews"><i class="fas fa-home"></i> Inicio</a>
                             <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
                             <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
+                            <a href="#" class="nav-item" id="newsLinkNews"><i class="fas fa-newspaper"></i> Noticias</a>
                             <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
                         </div>
                     </div>
-                    <!-- Chat flotante -->
-                    <div class="chat-popup" id="chatPopupNews" style="display: none;">
-                        <div class="chat-header">
-                            <h3>Chat con Dito</h3>
-                            <button class="close-chat" id="closeChatNews">×</button>
+                </div>
+
+                <!-- Ventana de menú -->
+                <div class="menu-window" id="menuWindow" style="display: none;">
+                    <div class="menu-header">
+                        <div class="user-profile">
+                            <div class="user-avatar"></div>
+                            <h3>Nombre de usuario</h3>
+                            <p>+503 1234-5678</p>
+                            <p>Usuario</p>
                         </div>
-                        <div class="chat-body">
-                            <p>Hola! ¿En qué puedo ayudarte?</p>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-section">
+                            <h4>General</h4>
+                            <a href="#" class="menu-item">Perfil</a>
                         </div>
-                        <div class="chat-footer">
-                            <input type="text" placeholder="Escribe un mensaje...">
-                            <button><i class="fas fa-paper-plane"></i></button>
+                        <div class="menu-section">
+                            <h4>Gestión</h4>
+                            <a href="#" class="menu-item">Límites transaccionales</a>
+                            <a href="#" class="menu-item">Conversión</a>
+                        </div>
+                        <div class="menu-section">
+                            <h4>Zona Dito</h4>
+                            <a href="#" class="menu-item" id="levelsLink">Niveles</a>
+                        </div>
+                        <div class="menu-section">
+                            <h4>Pagos</h4>
+                            <a href="#" class="menu-item">Historial</a>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="nav-bar">
+                            <a href="#" class="nav-item" id="homeLinkMenu"><i class="fas fa-home"></i> Inicio</a>
+                            <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
+                            <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
+                            <a href="#" class="nav-item" id="newsLinkMenu"><i class="fas fa-newspaper"></i> Noticias</a>
+                            <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ventana de niveles -->
+                <div class="levels-window" id="levelsWindow" style="display: none;">
+                    <div class="header">
+                        <div class="header__top">
+                            <div class="header__menu-icon" id="menuButtonLevels">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <div class="header__greeting"></div>
+                            <div class="header__icons">
+                                <div class="icon-circle">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                                <div class="icon-circle">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="levels-content">
+                        <div class="level-item" id="level1Link">
+                            <h3>NIVEL 1: Explorador Financiero</h3>
+                        </div>
+                        <div class="level-item">
+                            <h3>NIVEL 2: Navegante Digital</h3>
+                        </div>
+                        <div class="level-item">
+                            <h3>NIVEL 3: Ahorrador Novato</h3>
+                        </div>
+                        <div class="level-item">
+                            <h3>NIVEL 4: Gestor Responsable</h3>
+                        </div>
+                        <div class="level-item">
+                            <h3>NIVEL 5: Inversionista en Formación</h3>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="nav-bar">
+                            <a href="#" class="nav-item" id="homeLinkLevels"><i class="fas fa-home"></i> Inicio</a>
+                            <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
+                            <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
+                            <a href="#" class="nav-item" id="newsLinkLevels"><i class="fas fa-newspaper"></i> Noticias</a>
+                            <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ventana de Nivel 1 -->
+                <div class="level1-window" id="level1Window" style="display: none;">
+                    <div class="header">
+                        <div class="header__top">
+                            <div class="header__menu-icon" id="menuButtonLevel1">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <div class="header__greeting"></div>
+                            <div class="header__icons">
+                                <div class="icon-circle">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                                <div class="icon-circle">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level-content">
+                        <h2>🏆 Nivel 1: Explorador Financiero</h2>
+                        <p>⭐ <strong>Objetivo:</strong> Familiarizarse con conceptos básicos de finanzas personales, incluyendo ingresos, gastos y ahorro.</p>
+                        <div class="missions">
+                            <h3>📌 Misiones:</h3>
+                            <ul>
+                                <li>Misión "Cazador de Ingresos"</li>
+                                <li>Misión "Detective del Gasto"</li>
+                                <li>Misión "Arquitecto del Ahorro"</li>
+                                <li>Misión "Primer Paso hacia el Ahorro"</li>
+                                <li>Misión "Cazador de Noticias Financieras"</li>
+                                <li>Misión "Administrador Profesional"</li>
+                            </ul>
+                        </div>
+                        <div class="rewards">
+                            <h3>🎁 Recompensas:</h3>
+                            <p>Al completar este nivel, recibirás accesorios básicos para personalizar a tu DITO y desbloquearás consejos financieros adaptados a la realidad salvadoreña, mejorando tu experiencia de aprendizaje.</p>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="nav-bar">
+                            <a href="#" class="nav-item" id="homeLinkLevel1"><i class="fas fa-home"></i> Inicio</a>
+                            <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
+                            <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
+                            <a href="#" class="nav-item" id="newsLinkLevel1"><i class="fas fa-newspaper"></i> Noticias</a>
+                            <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ventana de mascota -->
+                <div class="pet-window" id="petWindow" style="display: none;">
+                    <div class="header">
+                        <div class="header__top">
+                            <div class="header__menu-icon" id="menuButtonPet">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <div class="header__greeting"></div>
+                            <div class="header__icons">
+                                <div class="icon-circle">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                                <div class="icon-circle">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pet-header">
+                            <div class="mascot-placeholder">
+                                <img src="/images/dito.png" alt="DitoPet" class="mascot">
+                            </div>
+                            <h2>Nombre de la Mascota</h2>
+                            <p>Estado: Feliz</p>
+                            <a href="#" class="pet-link">Ver más sobre el estado...</a>
+                        </div>
+                    </div>
+                    <div class="pet-content">
+                        <h3>Ayuda a tu mascota a crecer:</h3>
+                        <ul class="task-list">
+                            <li><input type="checkbox"> Misión 1: Primer paso hacia el ahorro. ¡La recompensa te espera!</li>
+                            <li><input type="checkbox"> Tus gastos del día han sido $100. Has superado tu límite de gasto :(</li>
+                            <li><input type="checkbox"> Recuerda leer <a href="#">la noticia de hoy</a></li>
+                        </ul>
+                        <div class="timeline-wrapper">
+                            <div class="timeline">
+                                <div class="timeline-bar">
+                                    <div class="timeline-progress" style="width: 20%;"></div>
+                                    <div class="timeline-marker current" style="left: 20%;">Nivel 1</div>
+                                    <div class="timeline-marker" style="left: 40%;">Accesorio</div>
+                                    <div class="timeline-marker" style="left: 60%;">Consejo</div>
+                                    <div class="timeline-marker" style="left: 80%;">Nivel 2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="nav-bar">
+                            <a href="#" class="nav-item" id="homeLinkPet"><i class="fas fa-home"></i> Inicio</a>
+                            <a href="#" class="nav-item"><i class="fas fa-credit-card"></i> Tarjetas</a>
+                            <a href="#" class="nav-item"><i class="fas fa-wallet"></i> Wallets</a>
+                            <a href="#" class="nav-item" id="newsLinkPet"><i class="fas fa-newspaper"></i> Noticias</a>
+                            <a href="#" class="nav-item"><i class="fas fa-concierge-bell"></i> Servicios</a>
                         </div>
                     </div>
                 </div>
